@@ -1,0 +1,34 @@
+#pragma once
+
+#include <d3d9.h>
+
+
+typedef enum
+{
+	TEXTURE_INDEX_FIELD01,
+	TEXTURE_INDEX_PLAYER,
+	TEXTURE_INDEX_TITLE,
+	TEXTURE_INDEX_RESULT,
+	TEXTURE_INDEX_LOAD,
+	TEXTURE_INDEX_OPERATION,
+	TEXTURE_INDEX_NUMBER,
+	TEXTURE_INDEX_LIGHT,
+	TEXTURE_INDEX_HP,
+	TEXTURE_INDEX_GUARD,
+	TEXTURE_INDEX_ATK,
+	TEXTURE_INDEX_DEF,
+	TEXTURE_INDEX_CLEAR,
+	TEXTURE_INDEX_OVER,
+	TEXTURE_INDEX_A,
+	TEXTURE_INDEX_B,
+	TEXTURE_INDEX_START,
+	TEXTURE_INDEX_SCORE,
+
+	TEXTURE_INDEX_MAX
+}TextureIndex;
+
+int Texture_Load(void); //èâä˙âª
+void Texture_Release(void); //èIóπèàóù
+LPDIRECT3DTEXTURE9 Texture_GetTexture(TextureIndex index);
+int Texture_GetWidth(TextureIndex index);
+int Texture_GetHeight(TextureIndex index);
